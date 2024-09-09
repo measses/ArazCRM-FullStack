@@ -1,0 +1,6 @@
+@ArazCRM.API_HostAddress = http://localhost:5256
+
+GET {{ArazCRM.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
