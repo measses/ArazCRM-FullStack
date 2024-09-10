@@ -15,4 +15,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ArazCRM.API.Repositories\ArazCRM.API.Repositories.csproj" />
+    <ProjectReference Include="..\ArazCRM.API.Services\ArazCRM.API.Services.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ArazCRM.API.Data\ArazCRM.API.Data.csproj" />
+  </ItemGroup>
+
 </Project>
