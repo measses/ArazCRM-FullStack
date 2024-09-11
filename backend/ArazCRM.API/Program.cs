@@ -1,4 +1,4 @@
-using ArazCRM.API.Data; // DbContext için gerekli
+using ArazCRM.API.Data;
 using ArazCRM.API.Repositories.Abstract;
 using ArazCRM.API.Repositories.Concrete;
 using ArazCRM.API.Services.Abstract;
@@ -14,13 +14,25 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// DbContext'i Scoped yaþam süresi ile kaydetme
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")),
+    ServiceLifetime.Scoped);
 
-// Servisler ve repository'ler için dependency injection ayarlarý
+// Service ve Repository'leri DI konteynerine ekleme
 builder.Services.AddScoped<ICustomerService, CustomerService>();
+builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
+
+builder.Services.AddScoped<IJobService, JobService>();
+builder.Services.AddScoped<IJobRepository, JobRepository>();
+
+builder.Services.AddScoped<IInvoiceService, InvoiceService>();
+builder.Services.AddScoped<IInvoiceRepository, InvoiceRepository>();
+
+// Generic repository'i DI konteynerine ekleme (Diðer entity'ler için kullanabilirsiniz)
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 
+// CORS ayarlarý
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll", builder =>
@@ -33,7 +45,7 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Development ortamýnda Swagger'i kullanma
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -42,7 +54,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseCors("AllowAll"); // CORS'u etkinleþtir
+// CORS
+app.UseCors("AllowAll");
 
 app.UseAuthorization();
 

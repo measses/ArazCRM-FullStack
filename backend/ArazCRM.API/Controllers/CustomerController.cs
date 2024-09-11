@@ -1,5 +1,6 @@
 ﻿using ArazCRM.API.Models.Entities;
 using ArazCRM.API.Services.Abstract;
+using ArazCRM.API.Services.Concrete;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ArazCRM.API.Controllers
@@ -45,14 +46,8 @@ namespace ArazCRM.API.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateCustomer(int id, [FromBody] Customer customer)
         {
-            // İlgili id'yi customer objesine atayalım
-            customer.CustomerId = id;
-
-            // Güncelleme işlemini yapıyoruz
-            await _customerService.UpdateAsync(customer);
-
-            // Başarılı güncelleme sonrası bir mesaj döndürüyoruz
-            return Ok(new { message = "Customer updated successfully" });
+            await _customerService.UpdateAsync(id, customer);
+            return NoContent();
         }
 
 

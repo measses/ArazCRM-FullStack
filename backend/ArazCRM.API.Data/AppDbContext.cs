@@ -28,7 +28,7 @@ namespace ArazCRM.API.Data
                 .HasOne(o => o.Job)
                 .WithMany(j => j.Offers)
                 .HasForeignKey(o => o.JobId)
-                .OnDelete(DeleteBehavior.Restrict);  // Cascade yerine Restrict kullanıldı
+                .OnDelete(DeleteBehavior.Restrict);  
 
             // Offers -> Customers ilişkisi: Müşteri silindiğinde teklifler silinir
             modelBuilder.Entity<Offer>()
@@ -71,6 +71,35 @@ namespace ArazCRM.API.Data
                 .WithMany(j => j.Expenses)
                 .HasForeignKey(e => e.JobId)
                 .OnDelete(DeleteBehavior.Cascade);  // İş silindiğinde masraflar da silinsin
+
+            modelBuilder.Entity<Invoice>()
+                .Property(i => i.Amount)
+                .HasColumnType("decimal(18,2)");
+
+            modelBuilder.Entity<Invoice>()
+               .Property(i => i.TaxAmount)
+               .HasColumnType("decimal(18,2)");
+
+            modelBuilder.Entity<Invoice>()
+                .Property(i => i.TotalAmount)
+                .HasColumnType("decimal(18,2)");
+
+            modelBuilder.Entity<Job>()
+               .Property(j => j.ActualCost)
+               .HasColumnType("decimal(18,2)");
+
+            modelBuilder.Entity<Job>()
+                .Property(j => j.EstimatedCost)
+                .HasColumnType("decimal(18,2)");
+
+            modelBuilder.Entity<Offer>()
+                 .Property(o => o.OfferAmount)
+                 .HasColumnType("decimal(18,2)");
+
+            modelBuilder.Entity<Expense>()
+               .Property(e => e.Amount)
+               .HasColumnType("decimal(18,2)");
+
 
             base.OnModelCreating(modelBuilder);
         }
