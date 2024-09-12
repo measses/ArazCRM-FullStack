@@ -29,6 +29,12 @@ builder.Services.AddScoped<IJobRepository, JobRepository>();
 builder.Services.AddScoped<IInvoiceService, InvoiceService>();
 builder.Services.AddScoped<IInvoiceRepository, InvoiceRepository>();
 
+builder.Services.AddScoped<IExpenseService, ExpenseService>();
+builder.Services.AddScoped<IExpenseRepository, ExpenseRepository>();
+
+builder.Services.AddScoped<IOfferService, OfferService>();
+builder.Services.AddScoped<IOfferRepository, OfferRepository>();
+
 // Generic repository'i DI konteynerine ekleme (Diðer entity'ler için kullanabilirsiniz)
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 

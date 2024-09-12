@@ -12,7 +12,7 @@ namespace ArazCRM.API.Models.Entities
 
 
         public int JobId { get; set; }
-        public Job Job { get; set; }
+        public Job? Job { get; set; }
 
         public string ExpenseCategory { get; set; } 
         public decimal Amount { get; set; } 

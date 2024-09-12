@@ -12,11 +12,11 @@ namespace ArazCRM.API.Models.Entities
 
       
         public int JobId { get; set; }
-        public Job Job { get; set; } 
+        public Job? Job { get; set; } 
 
       
         public int CustomerId { get; set; }
-        public Customer Customer { get; set; } 
+        public Customer? Customer { get; set; } 
 
         
         public DateTime OfferDate { get; set; }  

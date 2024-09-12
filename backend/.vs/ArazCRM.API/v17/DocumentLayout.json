@@ -1,118 +1,19 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\merto\\source\\repos\\ArazCRM-FullStack\\backend\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{2FCA4C56-E6A2-42D6-9D87-64C968D641CD}|ArazCRM.API\\ArazCRM.API.csproj|c:\\users\\merto\\source\\repos\\arazcrm-fullstack\\backend\\arazcrm.api\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{2FCA4C56-E6A2-42D6-9D87-64C968D641CD}|ArazCRM.API\\ArazCRM.API.csproj|solutionrelative:arazcrm.api\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E552657F-219D-49F2-BC33-AC1D96BCFB93}|ArazCRM.API.Services\\ArazCRM.API.Services.csproj|c:\\users\\merto\\source\\repos\\arazcrm-fullstack\\backend\\arazcrm.api.services\\abstract\\igenericservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E552657F-219D-49F2-BC33-AC1D96BCFB93}|ArazCRM.API.Services\\ArazCRM.API.Services.csproj|solutionrelative:arazcrm.api.services\\abstract\\igenericservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E552657F-219D-49F2-BC33-AC1D96BCFB93}|ArazCRM.API.Services\\ArazCRM.API.Services.csproj|c:\\users\\merto\\source\\repos\\arazcrm-fullstack\\backend\\arazcrm.api.services\\abstract\\iinvoiceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E552657F-219D-49F2-BC33-AC1D96BCFB93}|ArazCRM.API.Services\\ArazCRM.API.Services.csproj|solutionrelative:arazcrm.api.services\\abstract\\iinvoiceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D9BFCD0-FD14-47C3-964A-DBC63F5A4399}|ArazCRM.API.Repositories\\ArazCRM.API.Repositories.csproj|c:\\users\\merto\\source\\repos\\arazcrm-fullstack\\backend\\arazcrm.api.repositories\\abstract\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D9BFCD0-FD14-47C3-964A-DBC63F5A4399}|ArazCRM.API.Repositories\\ArazCRM.API.Repositories.csproj|solutionrelative:arazcrm.api.repositories\\abstract\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D9BFCD0-FD14-47C3-964A-DBC63F5A4399}|ArazCRM.API.Repositories\\ArazCRM.API.Repositories.csproj|c:\\users\\merto\\source\\repos\\arazcrm-fullstack\\backend\\arazcrm.api.repositories\\concrete\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D9BFCD0-FD14-47C3-964A-DBC63F5A4399}|ArazCRM.API.Repositories\\ArazCRM.API.Repositories.csproj|solutionrelative:arazcrm.api.repositories\\concrete\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FCA4C56-E6A2-42D6-9D87-64C968D641CD}|ArazCRM.API\\ArazCRM.API.csproj|c:\\users\\merto\\source\\repos\\arazcrm-fullstack\\backend\\arazcrm.api\\controllers\\invoicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FCA4C56-E6A2-42D6-9D87-64C968D641CD}|ArazCRM.API\\ArazCRM.API.csproj|solutionrelative:arazcrm.api\\controllers\\invoicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 1,
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedHeight": 259,
-          "SelectedChildIndex": 1,
+          "DockedHeight": 476,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Dockerfile",
-              "DocumentMoniker": "C:\\Users\\merto\\source\\repos\\ArazCRM-FullStack\\backend\\ArazCRM.API\\Dockerfile",
-              "RelativeDocumentMoniker": "ArazCRM.API\\Dockerfile",
-              "ToolTip": "C:\\Users\\merto\\source\\repos\\ArazCRM-FullStack\\backend\\ArazCRM.API\\Dockerfile",
-              "RelativeToolTip": "ArazCRM.API\\Dockerfile",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-09-11T17:48:52.794Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "GenericRepository.cs",
-              "DocumentMoniker": "C:\\Users\\merto\\source\\repos\\ArazCRM-FullStack\\backend\\ArazCRM.API.Repositories\\Concrete\\GenericRepository.cs",
-              "RelativeDocumentMoniker": "ArazCRM.API.Repositories\\Concrete\\GenericRepository.cs",
-              "ToolTip": "C:\\Users\\merto\\source\\repos\\ArazCRM-FullStack\\backend\\ArazCRM.API.Repositories\\Concrete\\GenericRepository.cs",
-              "RelativeToolTip": "ArazCRM.API.Repositories\\Concrete\\GenericRepository.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAAcwDMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-11T17:37:56.907Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IGenericRepository.cs",
-              "DocumentMoniker": "C:\\Users\\merto\\source\\repos\\ArazCRM-FullStack\\backend\\ArazCRM.API.Repositories\\Abstract\\IGenericRepository.cs",
-              "RelativeDocumentMoniker": "ArazCRM.API.Repositories\\Abstract\\IGenericRepository.cs",
-              "ToolTip": "C:\\Users\\merto\\source\\repos\\ArazCRM-FullStack\\backend\\ArazCRM.API.Repositories\\Abstract\\IGenericRepository.cs",
-              "RelativeToolTip": "ArazCRM.API.Repositories\\Abstract\\IGenericRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAlAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-11T17:37:52.175Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IInvoiceService.cs",
-              "DocumentMoniker": "C:\\Users\\merto\\source\\repos\\ArazCRM-FullStack\\backend\\ArazCRM.API.Services\\Abstract\\IInvoiceService.cs",
-              "RelativeDocumentMoniker": "ArazCRM.API.Services\\Abstract\\IInvoiceService.cs",
-              "ToolTip": "C:\\Users\\merto\\source\\repos\\ArazCRM-FullStack\\backend\\ArazCRM.API.Services\\Abstract\\IInvoiceService.cs",
-              "RelativeToolTip": "ArazCRM.API.Services\\Abstract\\IInvoiceService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-11T17:37:36.471Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IGenericService.cs",
-              "DocumentMoniker": "C:\\Users\\merto\\source\\repos\\ArazCRM-FullStack\\backend\\ArazCRM.API.Services\\Abstract\\IGenericService.cs",
-              "RelativeDocumentMoniker": "ArazCRM.API.Services\\Abstract\\IGenericService.cs",
-              "ToolTip": "C:\\Users\\merto\\source\\repos\\ArazCRM-FullStack\\backend\\ArazCRM.API.Services\\Abstract\\IGenericService.cs",
-              "RelativeToolTip": "ArazCRM.API.Services\\Abstract\\IGenericService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-11T17:37:33.555Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "InvoiceController.cs",
-              "DocumentMoniker": "C:\\Users\\merto\\source\\repos\\ArazCRM-FullStack\\backend\\ArazCRM.API\\Controllers\\InvoiceController.cs",
-              "RelativeDocumentMoniker": "ArazCRM.API\\Controllers\\InvoiceController.cs",
-              "ToolTip": "C:\\Users\\merto\\source\\repos\\ArazCRM-FullStack\\backend\\ArazCRM.API\\Controllers\\InvoiceController.cs",
-              "RelativeToolTip": "ArazCRM.API\\Controllers\\InvoiceController.cs",
-              "ViewState": "AQIAACAAAAAAAAAAAAAwwCwAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-11T17:37:21.634Z"
             }
           ]
         }
