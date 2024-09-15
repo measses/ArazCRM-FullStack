@@ -3,7 +3,9 @@ using ArazCRM.API.Repositories.Abstract;
 using ArazCRM.API.Repositories.Concrete;
 using ArazCRM.API.Services.Abstract;
 using ArazCRM.API.Services.Concrete;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
+using SwaggerThemes;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -38,6 +40,9 @@ builder.Services.AddScoped<IOfferRepository, OfferRepository>();
 builder.Services.AddScoped<IAppointmentRepository, AppointmentRepository>();
 builder.Services.AddScoped<IAppointmentService, AppointmentService>();
 
+builder.Services.AddScoped<IIncomeRepository, IncomeRepository>();
+builder.Services.AddScoped<IIncomeService, IncomeService>();
+
 
 // Generic repository'i DI konteynerine ekleme (Diðer entity'ler için kullanabilirsiniz)
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
@@ -56,13 +61,13 @@ builder.Services.AddCors(options =>
 var app = builder.Build();
 
 // Development ortamýnda Swagger'i kullanma
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+app.UseSwagger();
+app.UseSwaggerThemes(Theme.UniversalDark); 
+app.UseSwaggerUI();
+
 
 app.UseHttpsRedirection();
+app.UseStaticFiles(); 
 
 // CORS
 app.UseCors("AllowAll");
@@ -72,3 +77,4 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+

@@ -26,6 +26,8 @@ namespace ArazCRM.API.Models.Entities
         public ICollection<Invoice> Invoices { get; set; } = new List<Invoice>();
         public ICollection<Offer> Offers { get; set; } = new List<Offer>();
         public ICollection<Appointment> Appointments { get; set; } = new List<Appointment>();
+        public ICollection<Income> Incomes { get; set; } = new List<Income>();
+
 
 
 

@@ -20,6 +20,7 @@ namespace ArazCRM.API.Data
         public DbSet<Expense> Expenses { get; set; }
         public DbSet<Offer> Offers { get; set; }
         public DbSet<Appointment> Appointments { get; set; }
+        public DbSet<Income> Incomes { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -72,6 +73,21 @@ namespace ArazCRM.API.Data
                 .HasForeignKey(e => e.JobId)
                 .OnDelete(DeleteBehavior.Cascade);  // İş silindiğinde masraflar da silinsin
 
+
+            // Income -> Jobs ilişkisi: İş silindiğinde gelir silinmez
+            modelBuilder.Entity<Income>()
+                .HasOne(i => i.Job)
+                .WithMany(j => j.Incomes)
+                .HasForeignKey(i => i.JobId)
+                .OnDelete(DeleteBehavior.Restrict); // İş silindiğinde gelir silinmesin
+
+            // Income -> Customers ilişkisi: Müşteri silindiğinde gelir silinir
+            modelBuilder.Entity<Income>()
+                .HasOne(i => i.Customer)
+                .WithMany(c => c.Incomes)
+                .HasForeignKey(i => i.CustomerId)
+                .OnDelete(DeleteBehavior.Cascade); // Müşteri silindiğinde gelir de silinsin
+
             modelBuilder.Entity<Invoice>()
                 .Property(i => i.Amount)
                 .HasColumnType("decimal(18,2)");
@@ -99,6 +115,11 @@ namespace ArazCRM.API.Data
             modelBuilder.Entity<Expense>()
                .Property(e => e.Amount)
                .HasColumnType("decimal(18,2)");
+
+            
+            modelBuilder.Entity<Income>()
+                .Property(i => i.Amount)
+                .HasColumnType("decimal(18,2)");
 
 
             base.OnModelCreating(modelBuilder);
