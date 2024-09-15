@@ -39,7 +39,7 @@ namespace ArazCRM.API.Data.Migrations
                     b.Property<DateTime>("DateCreated")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("JobId")
+                    b.Property<int>("JobId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("LastModified")
@@ -327,7 +327,8 @@ namespace ArazCRM.API.Data.Migrations
                     b.HasOne("ArazCRM.API.Models.Entities.Job", "Job")
                         .WithMany("Appointments")
                         .HasForeignKey("JobId")
-                        .OnDelete(DeleteBehavior.Restrict);
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
 
                     b.Navigation("Customer");
 
