@@ -1,18 +1,18 @@
-# 1. Aşama: Yapılandırma (Build) Aşaması
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-WORKDIR /src
-COPY ["BestCloudCase-API.csproj", "."]
-RUN dotnet restore "BestCloudCase-API.csproj"
-COPY . .
-WORKDIR "/src"
-RUN dotnet build "BestCloudCase-API.csproj" -c Release -o /app/build
 
-# 2. Aşama: Yayınlama (Publish) Aşaması
-FROM build AS publish
-RUN dotnet publish "BestCloudCase-API.csproj" -c Release -o /app/publish
-
-# 3. Aşama: Çalıştırma (Run) Aşaması
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build-env
 WORKDIR /app
-COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "BestCloudCase-API.dll"]
+
+
+COPY *.sln ./
+COPY ArazCRM.API/*.csproj ./ArazCRM.API/
+RUN dotnet restore
+
+COPY . ./
+WORKDIR /app/ArazCRM.API
+RUN dotnet publish -c Release -o /app/out
+
+
+FROM mcr.microsoft.com/dotnet/aspnet:8.0
+WORKDIR /app
+COPY --from=build-env /app/out .
+ENTRYPOINT ["dotnet", "ArazCRM.API.dll"]
