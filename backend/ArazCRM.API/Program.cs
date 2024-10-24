@@ -9,6 +9,10 @@ using SwaggerThemes;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.WebHost.ConfigureKestrel(options =>
+{
+    options.ListenAnyIP(8081); 
+});
 // Add services to the container.
 builder.Services.AddControllers();
 
@@ -16,7 +20,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// DbContext'i Scoped yaþam süresi ile kaydetme
+// DbContext'i Scoped yaÃ¾am sÃ¼resi ile kaydetme
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")),
     ServiceLifetime.Scoped);
@@ -44,10 +48,10 @@ builder.Services.AddScoped<IIncomeRepository, IncomeRepository>();
 builder.Services.AddScoped<IIncomeService, IncomeService>();
 
 
-// Generic repository'i DI konteynerine ekleme (Diðer entity'ler için kullanabilirsiniz)
+// Generic repository'i DI konteynerine ekleme (DiÃ°er entity'ler iÃ§in kullanabilirsiniz)
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 
-// CORS ayarlarý
+// CORS ayarlarÃ½
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll", builder =>
@@ -60,13 +64,13 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
-// Development ortamýnda Swagger'i kullanma
+// Development ortamÃ½nda Swagger'i kullanma
 app.UseSwagger();
 app.UseSwaggerThemes(Theme.UniversalDark); 
 app.UseSwaggerUI();
 
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 app.UseStaticFiles(); 
 
 // CORS
